@@ -1,6 +1,9 @@
 package br.unicamp.ic.inf335.beans;
 
-public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean> {
+public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean>{
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	
 	private String codigo;
@@ -50,7 +53,6 @@ public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean
 		valor = 0.0;
 		estado = new String();
 	}
-
 	public ProdutoBean(String codigo, String nome, String descricao, Double valor, String estado) {
 		super();
 		this.codigo = codigo;
@@ -64,4 +66,5 @@ public class ProdutoBean implements java.io.Serializable, Comparable<ProdutoBean
 	public int compareTo(ProdutoBean p) {
 		return Double.compare(this.valor, p.getValor());
 	}
+
 }
